@@ -4,10 +4,16 @@ Most programs are compiled as
 
 and executed with
 
-    ./.[executable]
+`./.[executable]`
 
 or by running
 
-    make
+`make`
 
 to generate the object files and executable.
+
+Book Series:
+
+*Accelerated C++: Practical Programming by Example*
+Andrew Koenig and Barbara E. Moo
+ISBN 0-201-70353-X
