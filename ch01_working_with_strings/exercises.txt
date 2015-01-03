@@ -1,0 +1,40 @@
+1-0
+    Run make and ./input in input/.
+    Run make and ./framed_input in framed_input/.
+
+1-1
+    Yes, the definitions are valid.
+
+1-2
+    No. When concatenating strings, either operand may be a string literal or a 
+    character but not both. The first two operands here are string literals and
+    cannot be concatenated.
+
+1-3
+    Yes. Since braces {} are used to delimit scope, the constant variable s
+    is destroyed once the first segment terminates. The variable s was local to
+    that scope and since that scope is no-more, the variable name is free to
+    be re-used.
+
+1-4
+    Yes. Though the second segment is nested and has access to its parent 
+    definition of s, it is free to re-define it again for its local scope.
+    Adding the semicolon in between the nesting does little except have a
+    statement rely on its side-effect.
+
+1-5
+    No. When the line outputting x is executed, the x variable has already gone
+    out of scope (and thus destroyed and therefore meaningless). The problem
+    can be fixed by outputting x within the nested scope or declaring s one
+    level outside its current scope.
+
+1-6
+    std::cin stops reading in when it encounters a non-leading whitespace
+    character. Entering 'Samuel Beckett' will stop std::cin from reading on
+    encountering the space between 'Samuel' and 'Beckett'. The variable name
+    will hold 'Samuel' only. The buffer then gets flushed when "Hello Samuel"
+    gets printed because std::endl is written to the output. However, the input
+    buffer retains the value of 'Beckett' which is then read in by std::cin.
+    What is your name? Samuel Beckett
+    Hello Samuel
+    And what is yours? Hello, Beckett; nice to meet you too!
