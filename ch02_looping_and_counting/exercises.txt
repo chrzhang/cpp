@@ -1,0 +1,36 @@
+2-0
+    Run make and ./frame in flexible_frame/ to compile and run.
+
+2-1
+    Set main.cpp's pad = 0 for there to be no separation from the frame.
+
+2-2
+    Run make and ./frame in uneven_frame/ to compile and run.
+
+2-3
+    Run make and ./frame in custom_frame/ to compile and run.
+
+2-4
+    Run make and ./frame in combined_spaces/ to compile and run.
+
+2-5
+    Run make and ./square, ./rectangle, ./triangle in square/, rectangle/ and 
+    triangle/.
+
+2-6
+    Prints the numbers [1, 9]
+
+2-7
+    Run make and ./countdown in countdown/.
+
+2-8
+    Run make and ./product in product/.
+
+2-9
+    Run make and ./greater in greater/.
+
+2-10
+    The first use of std::cout means that within the scope of that block, cout
+    is synonymous with std::cout. Outside the block, std::cout is needed to
+    specify the namespace for cout since cout is part of the std namespace,
+    instead of a built-in type such as int.
