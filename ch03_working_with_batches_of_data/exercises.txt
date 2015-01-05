@@ -1,0 +1,4 @@
+3-0
+    Run make and ./grade in grades/ to compile and run.
+
+3-1
