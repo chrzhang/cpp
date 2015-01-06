@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 
+/*
+Display user's input with a little decoration (a frame of *'s).
+*/
 int main() {
 
     std::cout << "Please enter your first name: ";
