@@ -1,5 +1,8 @@
 #include <iostream>
 
+/*
+Practice outputting code.
+*/
 int main() {
 
     std::cout << "#include <iostream>\n"
