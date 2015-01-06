@@ -2,3 +2,29 @@
     Run make and ./grade in grades/ to compile and run.
 
 3-1
+    Intuitively this makes sense because the median could be any of the values 
+    that are already read and discarding them means there is no way to get the
+    value back. Here's a proof of sorts. Assume you can discard a value. There
+    could be 1 unknown number. If we had discarded the first few numbers after
+    finding their median was 2 (and the numbers were 0, 2, 1000), and the
+    unknown number is 9001, there would be no way to know that the median is
+    now 501 ((1000 + 2) / 2). QED.
+
+3-2
+    Run make and ./quartile in quartiles/ to compile and run.
+
+3-3
+    Run make and ./distinct in distinct/ to compile and run.
+
+3-4
+    Run make and ./extrema in extrema/ to compile and run.
+
+3-5
+    Run make and ./class in class_grades/ to compile and run.
+
+3-6
+    class_grades/ does not rely on division by zero since the program will
+    return on improper input. Run make and ./div0 in divide_by_zero to see what
+    happens in whatever C++ implementation desired (change compiler in makefile
+    if necessary). For my g++ run, the terminal outputted "Floating-point
+    exception".

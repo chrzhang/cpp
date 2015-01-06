@@ -19,6 +19,9 @@ using std::vector;
 
 typedef vector<double>::size_type vec_sz;
 
+/*
+Calculate a student's grade from midterm, final, and homework scores.
+*/
 int main() {
 
     cout << "Please enter your first name: ";
