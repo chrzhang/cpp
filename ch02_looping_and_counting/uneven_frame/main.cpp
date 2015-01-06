@@ -6,6 +6,9 @@ using std::cin;
 using std::string;
 using std::endl;
 
+/*
+Horizontal and vertical padding of the greeting frame are now independent.
+*/
 int main() {
 
     cout << "Please enter your first name: ";

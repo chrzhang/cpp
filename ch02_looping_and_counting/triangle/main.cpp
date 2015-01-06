@@ -6,6 +6,9 @@ using std::cin;
 using std::string;
 using std::endl;
 
+/*
+Let the user input parameters to draw a right triangle.
+*/
 int main() {
 
     cout << "Enter base: ";

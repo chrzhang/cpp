@@ -6,6 +6,9 @@ using std::cin;
 using std::string;
 using std::endl;
 
+/*
+Let the user input parameters to draw an ASCII rectangle.
+*/
 int main() {
 
     cout << "Enter horizontal side length: ";

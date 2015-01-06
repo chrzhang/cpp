@@ -6,6 +6,9 @@ using std::cin;
 using std::string;
 using std::endl;
 
+/*
+Let the user input how much padding they want in their ASCII frame.
+*/
 int main() {
 
     cout << "Please enter your first name: ";

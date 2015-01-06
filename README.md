@@ -12,6 +12,9 @@ or by running
 
 to generate the object files and executable.
 
+ref-makefile is a reference makefile that is usually copied in some form to each
+sandboxed directory.
+
 Book Series:
 
 

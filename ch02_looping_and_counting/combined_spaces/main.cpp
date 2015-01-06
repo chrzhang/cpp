@@ -6,6 +6,10 @@ using std::cin;
 using std::string;
 using std::endl;
 
+/*
+Rather than output spaces with a cout expression per space, combine the
+adjacent spaces and output them in a single cout expression.
+*/
 int main() {
 
     cout << "Please enter your first name: ";

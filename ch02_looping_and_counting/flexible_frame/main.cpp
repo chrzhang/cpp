@@ -6,6 +6,9 @@ using std::cin;
 using std::string;
 using std::endl;
 
+/*
+Change the amount nof padding with a single line of code.
+*/
 int main() {
 
     cout << "Please enter your first name: ";

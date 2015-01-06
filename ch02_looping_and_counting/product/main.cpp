@@ -1,5 +1,8 @@
 #include <iostream>
 
+/*
+Find the product of the numbers from [1, 9].
+*/
 int main() {
 
     int product = 1;

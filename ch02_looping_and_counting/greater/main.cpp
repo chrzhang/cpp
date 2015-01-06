@@ -1,5 +1,8 @@
 #include <iostream>
 
+/*
+Let the user input 2 numbers and report the greater of the two.
+*/
 int main() {
 
     std::cout << "Enter a number: ";
