@@ -1,4 +1,9 @@
 #include "Student_info.h"
+#include "median.h"
+
+#define MIDTERM_WEIGHT .2
+#define FINAL_WEIGHT .4
+#define HW_WEIGHT .4
 
 using std::istream;
 using std::vector;
@@ -11,22 +16,31 @@ bool compare(const Student_info & x, const Student_info & y) {
 
 istream & read(istream & is, Student_info & s) {
 
-    is >> s.name >> s.midterm >> s.final;
+    is >> s.name;
 
-    read_hw(is, s.homework);
+    read_grades(is, s.final_grade);
 
     return is;
 
 }
 
-istream & read_hw(istream & in, vector<double> & hw) {
+istream & read_grades(istream & in, double & final_grade) {
 
     if (in) {
-        hw.clear();
-
         double x;
+        final_grade = 0;
+
+        in >> x;
+        final_grade += MIDTERM_WEIGHT * x;
+
+        in >> x;
+        final_grade += FINAL_WEIGHT * x;
+
+        std::vector<double> homework_grades;
         while (in >> x)
-            hw.push_back(x);
+            homework_grades.push_back(x);
+
+        final_grade += HW_WEIGHT * median(homework_grades);
 
         in.clear();
     }

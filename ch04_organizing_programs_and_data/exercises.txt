@@ -26,3 +26,11 @@
     Run make and ./wordcount in wordcount/ to compile and run.
 
 4-6
+    Run make and ./grade in only_final_grades/ to compile and run.
+
+4-7
+    Run make and ./avg in average/ to compile and run.
+
+4-8
+    Given the code is legal, the return type of f() is a vector<double> or any
+    data structures where the indexing operator [] is legal.

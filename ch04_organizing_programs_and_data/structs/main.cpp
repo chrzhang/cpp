@@ -21,6 +21,11 @@ using std::setprecision;
 using std::sort;
 using std::max;
 
+/*
+Calculate grades for students where grades are entered with
+[name] [midterm_score] [final_exam_score] [hw1 score] [hw2 score] ...
+followed by any additional students.
+*/
 int main() {
 
     vector<Student_info> students;

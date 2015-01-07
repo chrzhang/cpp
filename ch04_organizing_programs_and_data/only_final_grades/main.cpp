@@ -21,6 +21,9 @@ using std::setprecision;
 using std::sort;
 using std::max;
 
+/*
+Calculate grades for multiple students without storing individual assignments.
+*/
 int main() {
 
     vector<Student_info> students;
