@@ -1,0 +1,28 @@
+4-0
+    Run make and ./grade in structs/ to compile and run. Input is terminated by
+    entering EOF (Ctrl + D on Linux and Ctrl + Z on Win) to display every
+    student's grades. (Also check out functions for earlier chapter examples)
+
+4-1
+    Since max() requires the types of its 2 arguments to match, calling max()
+    with an int and size_t would give an error or at least a warning. To fix the
+    issue, since maxlen represents a non-negative length of a string, maxlen
+    should be defined as a size_t type variable as well.
+
+4-2
+    Run make and ./square in squares/ to compile and run.
+
+4-3
+    If the width given to setw is not big enough to accomodate values, the value
+    will still be written and will exceed the limits. setw()'s documentation
+    says that it specifies the minimum width for the next, and only the next,
+    value to be printed. A more robust version is stored in robust_squares/.
+    Run make and ./robust to compile and run.
+
+4-4
+    Run make and ./double in double_squares/ to compile and run.
+
+4-5
+    Run make and ./wordcount in wordcount/ to compile and run.
+
+4-6
