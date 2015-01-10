@@ -8,8 +8,8 @@ CFLAGS=-c -Wall -g -ggdb -Ofast -pedantic-errors -std=c++0x
 LDFLAGS=
 
 # Change filenames accordingly per project
-SOURCES=main.cpp grade.cpp Student_info.cpp median.cpp
-EXECUTABLE=grade
+SOURCES=main.cpp
+EXECUTABLE=center
 
 OBJECTS=$(SOURCES:.cpp=.o)
 

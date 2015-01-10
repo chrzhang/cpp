@@ -36,7 +36,8 @@ using std::ofstream;
 using std::clock;
 
 /*
-Compare performance of extracting (removing) from a list versus a vector.
+Compare performance of extracting (removing) from a list by erasing versus
+moving to the front and resizing a vector.
 Calculate grades for students where grades are entered with
 [name] [midterm_score] [final_exam_score] [hw1 score] [hw2 score] ...
 followed by any additional students.
@@ -86,16 +87,17 @@ int main() {
 
     sort(students.begin(), students.end(), compare);
 
-    list<Student_info> studentsList{ begin(students), end(students) };
-    cout << "Extracting fails with vectors." << endl;
+    vector<Student_info> students2 = students;
+
+    cout << "Extracting fails with erase()." << endl;
     clock_t begin = clock();
-    extract_fails3(students); // With vectors
+    extract_fails3(students); // With erase()
     clock_t end = clock();
     double elapsed = double(end - begin) / CLOCKS_PER_SEC;
     cout << "Done. Elapsed " << elapsed << endl;
-    cout << "Extracting fails with lists." << endl;
+    cout << "Extracting fails with moving and resizing." << endl;
     begin = clock();
-    extract_fails4(studentsList); // With lists
+    remove_fails(students2); // With moving to front and resizing
     end = clock();
     elapsed = double(end - begin) / CLOCKS_PER_SEC;
     cout << "Done. Elapsed " << elapsed << endl;

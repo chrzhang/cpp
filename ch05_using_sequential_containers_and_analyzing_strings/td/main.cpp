@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdexcept> // For domain_error
 #include <vector>
+#include <list>
 #include <algorithm> // For sort()
 #include <string>
 #include <iomanip> // For setprecision()
@@ -10,6 +11,7 @@
 #include "Student_info.h"
 
 using std::vector;
+using std::list;
 using std::cout;
 using std::cin;
 using std::endl;
@@ -21,14 +23,19 @@ using std::setprecision;
 using std::sort;
 using std::max;
 
+// Change to a list (it also works)
+typedef list<Student_info> container;
+
 /*
+Be able to alternate between list and vector implementations by changing
+the typedef declaration above.
 Calculate grades for students where grades are entered with
 [name] [midterm_score] [final_exam_score] [hw1 score] [hw2 score] ...
 followed by any additional students.
 */
 int main() {
 
-    vector<Student_info> students;
+    container students;
     Student_info record;
     string::size_type maxlen = 0;
 
@@ -39,7 +46,9 @@ int main() {
 
     }
 
-    sort(students.begin(), students.end(), compare);
+    sortWrapper(students);
+
+    extract_fails(students); // Overloaded to accept either list or vector
 
     for (auto it = students.begin(); it != students.end(); it++) {
 

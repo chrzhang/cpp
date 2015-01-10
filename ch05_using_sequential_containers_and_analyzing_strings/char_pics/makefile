@@ -2,14 +2,14 @@
 CC=g++
 
 # Flags for the compiler
-CFLAGS=-c -Wall -g -ggdb -Ofast -pedantic-errors -std=c++0x
+CFLAGS=-c -Wall -g -ggdb -Ofast -pedantic-errors
 
 # Flags for compilers that need invoke the linker (e.g. libraries)
 LDFLAGS=
 
 # Change filenames accordingly per project
-SOURCES=main.cpp grade.cpp Student_info.cpp median.cpp
-EXECUTABLE=grade
+SOURCES=main.cpp frame.cpp
+EXECUTABLE=frame
 
 OBJECTS=$(SOURCES:.cpp=.o)
 

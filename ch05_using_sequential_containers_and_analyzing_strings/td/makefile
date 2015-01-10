@@ -9,7 +9,7 @@ LDFLAGS=
 
 # Change filenames accordingly per project
 SOURCES=main.cpp grade.cpp Student_info.cpp median.cpp
-EXECUTABLE=grade
+EXECUTABLE=td
 
 OBJECTS=$(SOURCES:.cpp=.o)
 
