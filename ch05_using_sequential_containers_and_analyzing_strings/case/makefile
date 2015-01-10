@@ -8,7 +8,7 @@ CFLAGS=-c -Wall -g -ggdb -Ofast -pedantic-errors
 LDFLAGS=
 
 # Change filenames accordingly per project
-SOURCES=main.cpp
+SOURCES=main.cpp case.cpp
 EXECUTABLE=case
 
 OBJECTS=$(SOURCES:.cpp=.o)

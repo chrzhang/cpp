@@ -10,7 +10,7 @@
     Run make and ./war in /list_vs_vec to compile and run.
 
 5-3
-    Run make and ./td in /td to compile and run.
+    Run make and ./td in /typedef to compile and run.
 
 5-4
     The earlier exercise allows either vector or list implementation by only
@@ -44,7 +44,13 @@
     iteration, s is not destroyed but preserved. Therefore, at some point s may
     exceed the maximum width when determining how much to pad and an invalid
     argument, like a negative size, may be attempted to be passed to the string
-    generator of how much spaces ot pad. 
+    generator of how much spaces ot pad.
 
 5-9
     Run ./case in /case to compile and run.
+
+5-10
+    Run ./palindrome in /palindrome to compile and run.
+
+5-11
+    Run ./scend in /ascending_descending to compile and run.
