@@ -18,7 +18,7 @@ string::size_type width(const vector<string> & v) {
 }
 
 
-vector<string> frame(const vector<string> & v) {
+vector<string> frame(const vector<string> & v) { // This time with iterators
 
     vector<string> ret;
     string::size_type maxlen = width(v);
@@ -28,10 +28,9 @@ vector<string> frame(const vector<string> & v) {
 
     ret.push_back(border); // Top
 
-    for (vector<string>::size_type i = 0; i != v.size(); ++i) {
+    for (vector<string>::const_iterator it = v.begin(); it != v.end(); ++it) {
 
-        // Write each row, padding with extra whitespace and framing with *
-        ret.push_back("* " + v[i] + string(maxlen - v[i].size(), ' ') + " *");
+        ret.push_back("* " + *it + string(maxlen - it->size(), ' ') + " *");
 
     }
 
@@ -65,24 +64,21 @@ vector<string> hcat(const vector<string> & left, const vector<string> & right) {
     // Leave a space between pictures
     string::size_type width1 = 1 + width(left);
 
-    // Indices for left and right
-    vector<string>::size_type i = 0, j = 0;
+    // Use iterators this time round
+    vector<string>::const_iterator itL, itR;
+    itL = left.begin();
+    itR = right.begin();
 
-    // Until we've seen both rows from all pictures
-    while (i != left.size() || j != right.size()) { // So long as there are rows
+    while (itL != left.end() || itR != right.end()) {
 
         string s;
+        if (itL != left.end())
+            s = *(itL++);
 
-        // If we haven't exhausted the left frame, keep adding
-        if (i != left.size())
-            s = left[i++];
-
-        // Determine how much to pad
         s += string(width1 - s.size(), ' ');
 
-        // If we haven't exhausted the right frame, add the right frame per row
-        if (j != right.size())
-            s += right[j++];
+        if (itR != right.end())
+            s += *(itR++);
 
         ret.push_back(s);
 

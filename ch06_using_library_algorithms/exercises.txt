@@ -1,0 +1,29 @@
+6-0
+    Run make and ./copy in copy/ to compile and run.
+    Do the same for ./grade in fail_pass/ and grade_schemes/ and with
+    ./palindrome in palindrome/, ./split in split/ and ./url in url/.
+
+6-1
+    Run make and ./frame in char_pics/ to compile and run.
+
+6-2
+    Turn on the EX62 define macro flag in url_finder/ to compile and run.
+
+6-3
+    Create and initialize a vector of ints to have 10 elements, each of value
+    100. Declare and create another vector, this one empty, with name v. Then
+    attempt to copy values in the range of the filled vector into the empty
+    vector. A segmentation fault results because the size of the empty vector is
+    0 and it can only be filled with an iterator made to be an inserter_iterator
+    or already have reserved enough room. This is why back_inserter is needed.
+
+6-4
+    Turn on the CORRECTION_X define macro flags in copy_vec/ to compile and run.
+
+6-5
+    Already included in grade_schemes/.
+
+6-6
+    Check the all_analysis and write_all_analysis functions.
+
+6-7
