@@ -9,18 +9,7 @@
 #include "grade.h"
 #include "Student_info.h"
 
-using std::vector;
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
-using std::domain_error;
-using std::istream;
-using std::streamsize;
-using std::setprecision;
-using std::sort;
-using std::swap;
-using std::max;
+using namespace std;
 
 /*
 Practice separating failing grades from passing ones.
@@ -43,7 +32,8 @@ int main() {
 
     sort(students.begin(), students.end(), compare);
 
-    vector<Student_info> fail_students = extract_fails2(students);
+    // Pass any criteria of choosing (in this case, pgrade)
+    vector<Student_info> fail_students = extract_nots(students, pgrade);
 
     cout << "Passing students: " << endl;
     for (vector<Student_info>::iterator it = students.begin();
