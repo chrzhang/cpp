@@ -8,8 +8,8 @@ CFLAGS=-c -Wall -g -ggdb -Ofast -pedantic-errors
 LDFLAGS=
 
 # Change filenames accordingly per project
-SOURCES=$(wildcard *.cpp)
-EXECUTABLE=hello
+SOURCES=main.cpp
+EXECUTABLE=wordct
 
 OBJECTS=$(SOURCES:.cpp=.o)
 
