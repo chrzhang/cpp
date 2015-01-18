@@ -1,0 +1,14 @@
+7-0
+    Run make and ./xref in crossref/, ./gen in sentence_gen/, and ./wordct in
+    wordcount/ to compile and run.
+
+7-1
+    Run make and ./wordct in wordcount_org_by_occ/ to compile and run.
+
+7-2
+    Run make and ./grade in letter_grades/ to compile and run.
+
+7-3
+    Run make and ./xref in crossref_unique/ to compile and run.
+
+ 
