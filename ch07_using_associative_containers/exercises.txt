@@ -11,4 +11,20 @@
 7-3
     Run make and ./xref in crossref_unique/ to compile and run.
 
- 
+7-4
+    Run make and ./xref in crossref_gainly/ to compile and run.
+
+7-5
+    Run make and ./gen in sentence_gen_lists/ to compile and run.
+
+7-6
+    Run make and ./gen in sentence_gen_loop/ to compile and run.
+
+7-7
+    The small modification in crossref/ handles this output.
+
+7-8
+    Run make and ./xref in crossref_url/ to compile and run.
+
+7-9
+    

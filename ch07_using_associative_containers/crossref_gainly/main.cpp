@@ -1,5 +1,7 @@
 #include "xref.h"
 #include <iostream>
+#include <fstream>
+#include <algorithm>
 
 using namespace std;
 
@@ -9,16 +11,27 @@ on.
 */
 int main() {
 
-    map<string, vector<int> > ret = xref(cin);
+    // Input
+    ifstream f("input.txt");
+    if (!f.is_open()) {
+        cout << "Can't open input file." << endl;
+        return 1;
+    }
+    map<string, vector<int> > ret = xref(f);
+    f.close();
+
+    string::size_type maxlen = 0;
+    for (map<string, vector<int> >::const_iterator it = ret.begin();
+         it != ret.end(); it++) {
+
+        maxlen = max(maxlen, (it->first).size());
+
+    }
 
     for (map<string, vector<int> >::const_iterator it = ret.begin();
          it != ret.end(); it++) {
 
-        cout << it->first << " occurs on line";
-        if (it->second.size() > 1)
-            cout << "s";
-        cout << ": ";
-
+        cout << it->first << string(maxlen - (it->first).size(), ' ') << " | ";
         vector<int>::const_iterator line_it = it->second.begin();
         cout << *line_it;
 
