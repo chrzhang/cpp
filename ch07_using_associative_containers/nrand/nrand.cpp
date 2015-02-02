@@ -45,10 +45,10 @@ int nrand(int n) {
         } while (r >= n);
 
         // To best visualize this, say we want to roll a number out of 8 but
-        // our current random number generator only supports a RAND_MAX of 2
+        // our current random number generator only supports a RAND_MAX of 1
         // To accurately roll out of 8, we can flip the coin, multiply the
         // result(1) by 4, flip, multiply the result(2) by 2, flip for result(1)
-        // A flip returns either 0 or 1
+        // A flip returns either 0 or 1 (which is why RAND_MAX == 1)
         /*
 
 
