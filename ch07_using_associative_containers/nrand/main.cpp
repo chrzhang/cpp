@@ -7,7 +7,10 @@ using namespace std;
 int main() {
 
     srand(time(NULL));
-    cout << nrand(2147483647) << endl;
+    for (int i = 0; i < 100; i++) {
+        cout << nrand(2147483647) << "\n";
+    }
+
     return 0;
 
 }
